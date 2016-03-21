@@ -10,13 +10,26 @@ Write a function `iron` that removes the wrinkles (capital letters) from a singl
 ``` javascript
 function iron(clothing_item){
     // code in here
+    // return ironed_clothing_item;
 }
 
 // DRIVER CODE
-console.log("ironed green shirt", iron("grEEn shIrt") === "green shirt" )
+console.log("ironed green shirt:", iron("grEEn shIrt") === "green shirt" );
 ```
 
-#### Ironing Load - Mock Data
+<details>
+<summary>**Solution** (Click Here)</summary>
+<br>
+```js
+function iron(clothing_item){
+    return clothing_item.toLowerCase();
+}
+
+console.log("ironed green shirt:", iron("grEEn shIrt") === "green shirt" )
+```
+</details>
+
+#### Ironing Load - Sample Data
 
 ```
 // input
@@ -47,13 +60,26 @@ Write a function `mend` that repairs/removes the holes ("/") in a single piece o
 ``` javascript
 function mend(clothing_item){
     // code in here
+    // return mended_clothing_item;
 }
 
 // DRIVER CODE
-console.log("mended tube socks", mend("tu/be socks") === "tube socks" )
+console.log("mended tube socks:", mend("tu/be socks") === "tube socks" )
 ```
 
-#### Mending Load - Mock Data
+<details>
+<summary>**Solution** (Click Here)</summary>
+<br>
+```js
+function mend(clothing_item){
+    return clothing_item.replace("/", "");
+}
+
+console.log("mended tube socks:", mend("tu/be socks") === "tube socks" )
+```
+</details>
+
+#### Mending Load - Sample Data
 ```
 // input
 var torn_clothes = [
@@ -80,13 +106,25 @@ Write a function `clean` that removes the dirt ("*") from a single piece of clot
 ``` javascript
 function clean(clothing_item){
     // code in here
+    // return clean_clothing_item;
 }
 
-// DRIVER CODE
-console.log("cleaned blue shirt", clean("*blue shirt*") === "blue shirt" )
+console.log("cleaned blue shirt:", clean("*blue shirt*") === "blue shirt" );
 ```
 
-#### Cleaning Load - Mock Data
+<details>
+<summary>**Solution** (Click Here)</summary>
+<br>
+```js
+function clean(clothing_item){
+    return clothing_item.replace(/\*/g, "");
+}
+
+console.log("cleaned blue shirt:", clean("*blue shirt*") === "blue shirt" );
+```
+</details>
+
+#### Cleaning Load - Sample Data
 ```
 var dirty_clothes = [
   "*blue shirt*",
@@ -109,12 +147,63 @@ var expected_clean_clothes = [
 ## Challenge: Help us process loads!
 Can you help the LaundryMap process an entire load of laundry, not just individual clothing items?
 
-Given the inputs and expected output, specified above, what needs to happen for the following assertions to pass?
-
-``` javascript
-console.log("ironed", my_output === expected_ironed_clothes)
-console.log("mended", my_output === expected_mended_clothes)
-console.log("cleaned", my_output === expected_clean_clothes)
-```
+Given the inputs and expected output, specified above, how would you generate the `expected` output?
 
 > **Hint**: You're going to need to loop (or iterate!) over the clothes in each load of laundry!
+
+## Solutions
+
+<details>
+<summary>**Using a painful manual approach** (Click Here)</summary>
+<br>
+```js
+var output = [];
+
+output.push( iron(wrinkled_clothes[0]) );
+output.push( iron(wrinkled_clothes[1]) );
+output.push( iron(wrinkled_clothes[2]) );
+output.push( iron(wrinkled_clothes[3]) );
+output.push( iron(wrinkled_clothes[4]) );
+output.push( iron(wrinkled_clothes[5]) );
+
+console.log("ironed:", output);
+```
+</details>
+
+<details>
+<summary>**Using a `for` loop** (Click Here)</summary>
+<br>
+```js
+var output = [];
+
+for(var i=0; i<wrinkled_clothes.length; i++){
+    output.push( iron(wrinkled_clothes[i]) );   
+}
+
+console.log("ironed:", output);
+```
+</details>
+
+<details>
+<summary>**Using the `forEach` method** (Click Here)</summary>
+<br>
+```js
+var output = [];
+
+wrinkled_clothes.forEach(function process_item(item){
+    output.push( iron(item) );   
+})
+
+console.log("ironed:", output);
+```
+</details>
+
+<details>
+<summary>**Using the `map` method** (Click Here)</summary>
+<br>
+```js
+var output = wrinkled_clothes.map(iron);
+
+console.log("ironed:", output);
+```
+</details>
