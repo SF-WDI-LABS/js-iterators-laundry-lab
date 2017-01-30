@@ -232,3 +232,18 @@ var output = wrinkled_clothes.map(function iron(clothing_item){
 console.log("ironed:", output);
 ```
 </details>
+
+## Bonus: Alphabetical
+The Boss thinks it will make us look more professional if we sort the laundry alphabetically before returning it to the customer. Without modifying any of the functions you created above, how might you accomplish this goal?
+
+<details>
+<summary>**Solution** (Click Here)</summary>
+<br>
+```js
+output.sort(); // easy!
+
+console.log(output);
+```
+</details>
+
+**Stretch**: Now sort it by the length of the string, longest to shortest. Your output should look like a pyramid of clothes!
