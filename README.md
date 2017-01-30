@@ -14,7 +14,7 @@ function iron(clothing_item){
 }
 
 // DRIVER CODE
-console.log("ironed green shirt:", iron("grEEn shIrt") === "green shirt" );
+iron("grEEn shIrt"); //=> "green shirt"
 ```
 
 <details>
@@ -25,7 +25,7 @@ function iron(clothing_item){
     return clothing_item.toLowerCase();
 }
 
-console.log("ironed green shirt:", iron("grEEn shIrt") === "green shirt" )
+iron("grEEn shIrt"); //=> "green shirt"
 ```
 </details>
 
@@ -64,7 +64,7 @@ function mend(clothing_item){
 }
 
 // DRIVER CODE
-console.log("mended tube socks:", mend("tu/be socks") === "tube socks" )
+mend("tu/be socks"); //=> "tube socks"
 ```
 
 <details>
@@ -75,7 +75,7 @@ function mend(clothing_item){
     return clothing_item.replace("/", "");
 }
 
-console.log("mended tube socks:", mend("tu/be socks") === "tube socks" )
+mend("tu/be socks"); //=> "tube socks"
 ```
 </details>
 
@@ -109,7 +109,7 @@ function clean(clothing_item){
     // return clean_clothing_item;
 }
 
-console.log("cleaned blue shirt:", clean("*blue shirt*") === "blue shirt" );
+clean("*blue shirt"); //=> "blue shirt"
 ```
 
 <details>
@@ -117,21 +117,21 @@ console.log("cleaned blue shirt:", clean("*blue shirt*") === "blue shirt" );
 <br>
 ```js
 function clean(clothing_item){
-    return clothing_item.replace(/\*/g, "");
+    return clothing_item.replace("*", "");
 }
 
-console.log("cleaned blue shirt:", clean("*blue shirt*") === "blue shirt" );
+clean("*blue shirt"); //=> "blue shirt"
 ```
 </details>
 
 #### Cleaning Load - Sample Data
 ```
 var dirty_clothes = [
-  "*blue shirt*",
-  "****argyle socks****",
-  "**ugly sweater**",
-  "**brown plaid pants**",
-  "*paisley dress shirt*"
+  "*blue shirt",
+  "argyle s*ocks",
+  "u*gly sweater",
+  "brown plaid pa*nts",
+  "paisl*ey dress shirt"
 ]
 
 var expected_clean_clothes = [
@@ -157,6 +157,10 @@ Given the inputs and expected output, specified above, how would you generate th
 <summary>**Using a painful manual approach** (Click Here)</summary>
 <br>
 ```js
+function iron(clothing_item){
+    return clothing_item.toLowerCase();
+}
+
 var output = [];
 
 output.push( iron(wrinkled_clothes[0]) );
@@ -174,6 +178,10 @@ console.log("ironed:", output);
 <summary>**Using a `for` loop** (Click Here)</summary>
 <br>
 ```js
+function iron(clothing_item){
+    return clothing_item.toLowerCase();
+}
+
 var output = [];
 
 for(var i=0; i<wrinkled_clothes.length; i++){
@@ -188,6 +196,10 @@ console.log("ironed:", output);
 <summary>**Using the `forEach` method** (Click Here)</summary>
 <br>
 ```js
+function iron(clothing_item){
+    return clothing_item.toLowerCase();
+}
+
 var output = [];
 
 wrinkled_clothes.forEach(function process_item(item){
@@ -202,7 +214,20 @@ console.log("ironed:", output);
 <summary>**Using the `map` method** (Click Here)</summary>
 <br>
 ```js
+function iron(clothing_item){
+    return clothing_item.toLowerCase();
+}
+
 var output = wrinkled_clothes.map(iron);
+
+console.log("ironed:", output);
+```
+
+This works too:
+```js
+var output = wrinkled_clothes.map(function iron(clothing_item){
+    return clothing_item.toLowerCase();
+});
 
 console.log("ironed:", output);
 ```
