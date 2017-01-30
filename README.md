@@ -260,6 +260,9 @@ doBatch(["pLe*A/tED SKirt", "f*AncY T/Ie"]);
 ```
 </details>
 
+#### Super Bonus: Batches of batches
+How would you process loads and loads of clothes, all at once?
+
 ## Stretch: Professional Sorts!
 The Boss thinks it will make us look more professional if we sort the laundry alphabetically before returning it to the customer. Without modifying any of the functions you created above, how might you accomplish this goal?
 
