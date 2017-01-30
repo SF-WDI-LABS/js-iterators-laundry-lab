@@ -275,7 +275,31 @@ doBatch(["pLe*A/tED SKirt", "f*AncY T/Ie"]);
 </details>
 
 #### Super Bonus: Batches of batches
-How would you process loads and loads of clothes, all at once?
+How would you process loads and loads of customer clothes, all at once? (and return/output them all at once too!)
+
+<details>
+<summary>**Solution** (Click Here)</summary>
+<br>
+```js
+function doBatches(loads_of_clothes) {
+    return loads_of_clothes.map(function(clothes){
+        iron(mend(clean(clothes)))
+    });
+}
+
+doBatches([
+    ["pLe*A/tED SKirt", "f*AncY T/Ie"], // e.g. customer 1
+    ["cumber*bund"],                    //      customer 2
+    ["rEd tuX/edo", "red* soCks"]       //      customer 3
+]);
+
+//=> [
+//     ["pLeated skirt", "fancy tie"],
+//     ["cumberbund"],
+//     ["red tuxedo", "red socks"]
+//   ]
+```
+</details>
 
 <hr>
 <hr>
