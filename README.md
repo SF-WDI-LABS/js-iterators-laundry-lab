@@ -233,7 +233,34 @@ console.log("ironed:", output);
 ```
 </details>
 
-## Bonus: Alphabetical
+## Bonus: Processing Batches
+The Boss is thrilled we can `iron`, `mend`, and `clean` an entire load of clothing. Let's take it a step further -- let's wrap it all up in a single mega `doBatch` function that uses `iron`, `mend` and `clean` internally!
+
+```js
+// copy your `iron`, `mend`, `clean` functions up here (but do not modify!)
+
+function doBatch(clothes){
+    // your code here
+}
+
+doBatch(["pLe*A/tED SKirt", "f*AncY T/Ie"]);
+//=> ["pleated skirt", "fancy tie"]
+```
+
+<details>
+<summary>**Solution** (Click Here)</summary>
+<br>
+```js
+function doBatch(clothes) {
+    return iron(mend(clean(clothes)));
+}
+
+doBatch(["pLe*A/tED SKirt", "f*AncY T/Ie"]);
+//=> ["pleated skirt", "fancy tie"]
+```
+</details>
+
+## Stretch: Alphabetical
 The Boss thinks it will make us look more professional if we sort the laundry alphabetically before returning it to the customer. Without modifying any of the functions you created above, how might you accomplish this goal?
 
 <details>
@@ -246,4 +273,4 @@ console.log(output);
 ```
 </details>
 
-**Stretch**: Now sort it by the length of the string, longest to shortest. Your output should look like a pyramid of clothes!
+**Mega-Stretch**: Now sort it by the length of the string, longest to shortest. Your output should look like a pyramid of clothes!
