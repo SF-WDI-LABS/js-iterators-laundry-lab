@@ -53,6 +53,10 @@ var expected_ironed_clothes = [
 ]
 ```
 
+<hr>
+<hr>
+<hr>
+
 ## Mend
 
 Write a function `mend` that repairs/removes the holes ("/") in a single piece of clothing.
@@ -98,6 +102,9 @@ var expected_mended_clothes = [
 ]
 ```
 
+<hr>
+<hr>
+<hr>
 
 ## Clean
 
@@ -143,8 +150,11 @@ var expected_clean_clothes = [
 ]
 ```
 
+<hr>
+<hr>
+<hr>
 
-## Challenge: Help us process loads!
+## Core Challenge: Help us process loads!
 Can you help the LaundryMap process an entire load of laundry, not just individual clothing items?
 
 Given the inputs and expected output, specified above, how would you generate the `expected` output?
@@ -233,6 +243,10 @@ console.log("ironed:", output);
 ```
 </details>
 
+<hr>
+<hr>
+<hr>
+
 ## Bonus: Processing Batches
 The Boss is thrilled we can `iron`, `mend`, and `clean` an entire load of clothing. Let's take it a step further -- let's wrap it all up in a single mega `doBatch` function that uses `iron`, `mend` and `clean` internally!
 
@@ -263,6 +277,10 @@ doBatch(["pLe*A/tED SKirt", "f*AncY T/Ie"]);
 #### Super Bonus: Batches of batches
 How would you process loads and loads of clothes, all at once?
 
+<hr>
+<hr>
+<hr>
+
 ## Stretch: Professional Sorts!
 The Boss thinks it will make us look more professional if we sort the laundry alphabetically before returning it to the customer. Without modifying any of the functions you created above, how might you accomplish this goal?
 
@@ -275,6 +293,7 @@ output.sort(); // easy!
 console.log(output);
 ```
 </details>
+
 
 #### Mega-Stretch: Numeric Sort
 Now sort it by the length of the string, longest to shortest. Like a tidy pyramid of clothes!
