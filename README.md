@@ -260,7 +260,7 @@ doBatch(["pLe*A/tED SKirt", "f*AncY T/Ie"]);
 ```
 </details>
 
-## Stretch: Alphabetical Sort
+## Stretch: Professional Sorts!
 The Boss thinks it will make us look more professional if we sort the laundry alphabetically before returning it to the customer. Without modifying any of the functions you created above, how might you accomplish this goal?
 
 <details>
