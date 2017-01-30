@@ -48,7 +48,7 @@ var expected_ironed_clothes = [
   "tube socks",
   "tie dye shirt",
   "gray pants",
-  "handkerchief"
+  "handkerchief",
   "white blouse"
 ]
 ```
@@ -260,7 +260,7 @@ doBatch(["pLe*A/tED SKirt", "f*AncY T/Ie"]);
 ```
 </details>
 
-## Stretch: Alphabetical
+## Stretch: Alphabetical Sort
 The Boss thinks it will make us look more professional if we sort the laundry alphabetically before returning it to the customer. Without modifying any of the functions you created above, how might you accomplish this goal?
 
 <details>
@@ -273,4 +273,17 @@ console.log(output);
 ```
 </details>
 
-**Mega-Stretch**: Now sort it by the length of the string, longest to shortest. Your output should look like a pyramid of clothes!
+#### Mega-Stretch: Numeric Sort
+Now sort it by the length of the string, longest to shortest. Like a tidy pyramid of clothes!
+
+<details>
+<summary>**Solution** (Click Here)</summary>
+<br>
+```js
+output.sort(function(a,b){
+    return a.length - b.length;
+});
+
+console.log(output);
+```
+</details>
