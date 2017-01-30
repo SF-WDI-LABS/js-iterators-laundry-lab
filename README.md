@@ -5,7 +5,7 @@
 Welcome to my LaundryMap! We offer the following services: `iron`, `mend`, `clean`. Unfortunately, we can only process individual items of clothing. We have not figured out how to process loads... ¯\\_(ツ)_/¯
 
 ## Iron
-Write a function `iron` that removes the wrinkles (capital letters) from a single piece of clothing.
+Write a function `iron` that removes the wrinkles (capital letters) from a *single* piece of clothing.
 
 ``` javascript
 function iron(clothing_item){
@@ -59,7 +59,7 @@ var expected_ironed_clothes = [
 
 ## Mend
 
-Write a function `mend` that repairs/removes the holes ("/") in a single piece of clothing.
+Write a function `mend` that repairs/removes the holes ("/") in a *single* piece of clothing.
 
 ``` javascript
 function mend(clothing_item){
@@ -108,7 +108,7 @@ var expected_mended_clothes = [
 
 ## Clean
 
-Write a function `clean` that removes the dirt ("*") from a single piece of clothing.
+Write a function `clean` that removes the dirt ("*") from a *single* piece of clothing.
 
 ``` javascript
 function clean(clothing_item){
@@ -155,7 +155,7 @@ var expected_clean_clothes = [
 <hr>
 
 ## Core Challenge: Help us process loads!
-Can you help the LaundryMap process an entire load of laundry, not just individual clothing items?
+Can you help the LaundryMap process an *entire* load of laundry, not just individual clothing items?
 
 Given the inputs and expected output, specified above, how would you generate the `expected` output?
 
@@ -275,7 +275,7 @@ doBatch(["pLe*A/tED SKirt", "f*AncY T/Ie"]);
 </details>
 
 #### Super Bonus: Batches of batches
-How would you process loads and loads of customer clothes, all at once? (and return/output them all at once too!)
+How would you process *loads and loads* of customer clothes, all at once? (and return/output them all at once too!)
 
 <details>
 <summary>**Solution** (Click Here)</summary>
