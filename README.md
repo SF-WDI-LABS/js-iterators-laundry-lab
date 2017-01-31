@@ -283,7 +283,9 @@ How would you process *loads and loads* of customer clothes, all at once? (and r
 ```js
 function doBatches(loads_of_clothes) {
     return loads_of_clothes.map(function(clothes){
-        return iron(mend(clean(clothes)));
+        return clothes.map(function(item){
+            return iron(mend(clean(item)));
+        });
     });
 }
 
