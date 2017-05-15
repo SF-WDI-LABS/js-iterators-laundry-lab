@@ -18,8 +18,8 @@ iron("grEEn shIrt"); //=> "green shirt"
 ```
 
 <details>
-<summary>**Solution** (Click Here)</summary>
-<br>
+<summary>Solution (Click Here)</summary>
+
 ```js
 function iron(clothing_item){
     return clothing_item.toLowerCase();
@@ -27,6 +27,7 @@ function iron(clothing_item){
 
 iron("grEEn shIrt"); //=> "green shirt"
 ```
+
 </details>
 
 #### Ironing Load - Sample Data
@@ -72,8 +73,8 @@ mend("tu/be socks"); //=> "tube socks"
 ```
 
 <details>
-<summary>**Solution** (Click Here)</summary>
-<br>
+<summary>Solution (Click Here)</summary>
+
 ```js
 function mend(clothing_item){
     return clothing_item.replace("/", "");
@@ -81,6 +82,7 @@ function mend(clothing_item){
 
 mend("tu/be socks"); //=> "tube socks"
 ```
+
 </details>
 
 #### Mending Load - Sample Data
@@ -120,8 +122,8 @@ clean("*blue shirt"); //=> "blue shirt"
 ```
 
 <details>
-<summary>**Solution** (Click Here)</summary>
-<br>
+<summary>Solution (Click Here)</summary>
+
 ```js
 function clean(clothing_item){
     return clothing_item.replace("*", "");
@@ -129,6 +131,7 @@ function clean(clothing_item){
 
 clean("*blue shirt"); //=> "blue shirt"
 ```
+
 </details>
 
 #### Cleaning Load - Sample Data
@@ -164,8 +167,8 @@ Given the inputs and expected output, specified above, how would you generate th
 ## Solutions
 
 <details>
-<summary>**Using a painful manual approach** (Click Here)</summary>
-<br>
+<summary>Using a painful manual approach (Click Here)</summary>
+
 ```js
 function iron(clothing_item){
     return clothing_item.toLowerCase();
@@ -182,11 +185,12 @@ output.push( iron(wrinkled_clothes[5]) );
 
 console.log("ironed:", output);
 ```
+
 </details>
 
 <details>
-<summary>**Using a `for` loop** (Click Here)</summary>
-<br>
+<summary>Using a `for` loop (Click Here)</summary>
+
 ```js
 function iron(clothing_item){
     return clothing_item.toLowerCase();
@@ -200,11 +204,12 @@ for(var i=0; i<wrinkled_clothes.length; i++){
 
 console.log("ironed:", output);
 ```
+
 </details>
 
 <details>
-<summary>**Using the `forEach` method** (Click Here)</summary>
-<br>
+<summary>Using the `forEach` method (Click Here)</summary>
+
 ```js
 function iron(clothing_item){
     return clothing_item.toLowerCase();
@@ -218,11 +223,12 @@ wrinkled_clothes.forEach(function process_item(item){
 
 console.log("ironed:", output);
 ```
+
 </details>
 
 <details>
-<summary>**Using the `map` method** (Click Here)</summary>
-<br>
+<summary>Using the `map` method (Click Here)</summary>
+
 ```js
 function iron(clothing_item){
     return clothing_item.toLowerCase();
@@ -241,6 +247,7 @@ var output = wrinkled_clothes.map(function iron(clothing_item){
 
 console.log("ironed:", output);
 ```
+
 </details>
 
 <hr>
@@ -262,8 +269,8 @@ doBatch(["pLe*A/tED SKirt", "f*AncY T/Ie"]);
 ```
 
 <details>
-<summary>**Solution** (Click Here)</summary>
-<br>
+<summary>Solution (Click Here)</summary>
+
 ```js
 function doBatch(clothes) {
     return iron(mend(clean(clothes)));
@@ -272,14 +279,15 @@ function doBatch(clothes) {
 doBatch(["pLe*A/tED SKirt", "f*AncY T/Ie"]);
 //=> ["pleated skirt", "fancy tie"]
 ```
+
 </details>
 
 #### Super Bonus: Batches of batches
 How would you process *loads and loads* of customer clothes, all at once? (and return/output them all at once too!)
 
 <details>
-<summary>**Solution** (Click Here)</summary>
-<br>
+<summary>Solution (Click Here)</summary>
+
 ```js
 function doBatches(loads_of_clothes) {
     return loads_of_clothes.map(function(clothes){
@@ -301,6 +309,7 @@ doBatches([
 //     ["red tuxedo", "red socks"]
 //   ]
 ```
+
 </details>
 
 <hr>
@@ -311,13 +320,14 @@ doBatches([
 The Boss thinks it will make us look more professional if we sort the laundry alphabetically before returning it to the customer. Without modifying any of the functions you created above, how might you accomplish this goal?
 
 <details>
-<summary>**Solution** (Click Here)</summary>
-<br>
+<summary>Solution (Click Here)</summary>
+
 ```js
 output.sort(); // easy!
 
 console.log(output);
 ```
+
 </details>
 
 
@@ -325,8 +335,8 @@ console.log(output);
 Now sort it by the length of the string, longest to shortest. Like a tidy pyramid of clothes!
 
 <details>
-<summary>**Solution** (Click Here)</summary>
-<br>
+<summary>Solution (Click Here)</summary>
+
 ```js
 output.sort(function(a,b){
     return a.length - b.length;
@@ -334,4 +344,5 @@ output.sort(function(a,b){
 
 console.log(output);
 ```
+
 </details>
