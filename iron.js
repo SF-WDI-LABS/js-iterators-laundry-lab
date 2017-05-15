@@ -8,7 +8,9 @@ var wrinkled_clothes = [
 ];
 
 /* YOUR CODE HERE */
-
+function iron(clothing_item){
+    // return ironed_clothing_item;
+}
 
 
 /* PRINT RESULT */

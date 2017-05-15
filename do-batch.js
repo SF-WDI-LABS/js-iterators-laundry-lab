@@ -1,4 +1,4 @@
-var input = [
+var batch_input = [
   "pLe*A/tED SKirt",
   "f*AncY T/Ie"
 ];
@@ -9,7 +9,9 @@ var input = [
 
 
 /* YOUR CODE HERE */
-
+function doBatch(clothes){
+    // your code here
+}
 
 
 /* PRINT RESULT */
