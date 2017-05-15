@@ -33,9 +33,10 @@
       return JSON.stringify( window[challenge.function_name](arg) );
     };
     var liEls = challenge.input.map(function(input){
+      var sInput = JSON.stringify(input);
       return `<tr>
-                <td><button>${challenge.function_name}("${input}")</button></td>
-                <td><span>${ currentFunction(input) }</span></td>
+                <td><button>${challenge.function_name}(${sInput})</button></td>
+                <td><span>${ currentFunction(sInput) }</span></td>
               </tr>`;
     }).join("")
     return `
